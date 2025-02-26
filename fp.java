@@ -27,5 +27,29 @@ public class fp {
         } catch (ArithmeticException e) {
             System.out.println("Denominator cant be zero");
         }
+
+        A obj1 = new A();
+        B obj2 = new B();
+        for (int i = 0; i < 10; i++) {
+            obj1.shows();
+        }
+
+        for (int i = 0; i < 10; i++) {
+            obj2.shows();
+        }
     }
+
+}
+
+class A {
+    public void shows() {
+        System.out.println("Hello");
+    }
+}
+
+class B {
+    public void shows() {
+        System.out.println("Hi");
+    }
+
 }
