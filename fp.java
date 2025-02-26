@@ -17,6 +17,12 @@
 // System.out.println(a);
 // }
 // }
+
+// As a part of Threading Here needed few changes in the code Like the
+// 1 normal class should become Thread
+// 2 There should be Start method
+// 3 There should be run menthods
+
 public class fp {
 
     public static void main(String[] args) {
@@ -30,26 +36,26 @@ public class fp {
 
         A obj1 = new A();
         B obj2 = new B();
-        for (int i = 0; i < 10; i++) {
-            obj1.shows();
-        }
+        obj1.start();
+        obj2.start();
+    }
 
-        for (int i = 0; i < 10; i++) {
-            obj2.shows();
+}
+
+class A extends Thread {
+    public void run() {
+        for (int i = 0; i < 100; i++) {
+            System.out.println("Hello");
         }
     }
 
 }
 
-class A {
-    public void shows() {
-        System.out.println("Hello");
-    }
-}
-
-class B {
-    public void shows() {
-        System.out.println("Hi");
+class B extends Thread {
+    public void run() {
+        for (int i = 0; i < 100; i++) {
+            System.out.println("Hi");
+        }
     }
 
 }
