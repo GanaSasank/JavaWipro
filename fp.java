@@ -28,6 +28,7 @@ public class fp {
     public static void main(String[] args) {
         int a = 0;
         int b = 12;
+        final int myNum = 15;
         try {
             System.out.println(b / a);
         } catch (ArithmeticException e) {
